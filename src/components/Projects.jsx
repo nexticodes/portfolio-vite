@@ -25,7 +25,7 @@ const Projects = () => {
             tech: ['Node.JS', 'Express', 'MongoDB', 'Mongoose', 'EJS'],
             images: [],
             links: ['deployed_link', 'github_link']
-        }
+        },
     ]
     
   return (
