@@ -79,7 +79,7 @@ const Skills = () => {
     return (
         <div className="container skills">
             <div className="content">
-                <div className="box">
+                <div className="box skills-box">
                     {skills.map((s, i) => (
                         <div className="skill">
                             <p>{s.skill}</p>
