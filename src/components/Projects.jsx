@@ -9,27 +9,29 @@ const Projects = ({scrollRef}) => {
                 "A very simple RPG game that allows the user to acquire an NFT and use that as their character in the game to attack spawned enemies. Its smart contract is deployed on the Rinkeby test network simulate its functions without spending expensive resources.",
             tech: ["React.JS", "Node.JS", "Ethers.JS", "Solidity", "IPFS"],
             images: [],
-            links: ["deployed_link", "github_link"],
+            links: ["COMING_SOON", "https://github.com/nexticodes/nft_game"],
         },
         {
-            title: "STOP, GO TYPE!",
+            title: "Event Scheduling App",
+            name: "AightBet",
+            description:
+                "It is a social event scheduling app that encourages people to commit to plans they made with their friends.",
+            tech: ["React.JS", "Node.JS", "Ethers.JS", "Solidity", "IPFS"],
+            images: [],
+            links: ["https://aight-bet.herokuapp.com/", "https://github.com/nexticodes/event-scheduler-app"],
+        },
+        {
+            title: "Stop&Go Typeracer Clone",
             name: "RLGLTyperacer",
             description:
                 "This is browser-based typing game that is similar to the Typeracer game, but with the Red Light Green Light functionality and health point system. The user is given a passage and the user will have to type every character in every word correctly within 60 seconds in order to win the game",
             tech: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
             images: [],
-            links: ["deployed_link", "github_link"],
-        },
-        {
-            title: "Personalized Match Tracker App",
-            name: "GitGudGG",
-            description:
-                "This is browser-based Note taking tracking application that allows Users to post and keep track of their match history for a game they want to improve on – in this case, it's for the game Apex Legends.",
-            tech: ["Node.JS", "Express", "MongoDB", "Mongoose", "EJS"],
-            images: [],
-            links: ["deployed_link", "github_link"],
+            links: ["https://nexticodes.github.io/rlgl-typeracer/", "https://github.com/nexticodes/rlgl-typeracer"],
         },
     ];
+
+    const renderIcons = () => (<></>);
 
     return (
         <div ref={el => scrollRef.current = { ...scrollRef.current, projects: el}} className="container projects">
