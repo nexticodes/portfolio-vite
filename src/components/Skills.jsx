@@ -13,7 +13,7 @@ import ethersLogo from "../assets/skills/ethers.svg";
 import pythonLogo from "../assets/skills/python.svg";
 import "../assets/styles/Skills.css";
 
-const Skills = () => {
+const Skills = ({scrollRef}) => {
     const skills = [
         {
             skill: "React.js",
@@ -77,11 +77,11 @@ const Skills = () => {
         },
     ];
     return (
-        <div className="container skills">
+        <div ref={el => scrollRef.current = { ...scrollRef.current, skills: el}} className="container skills">
             <div className="content">
                 <div className="box skills-box">
                     {skills.map((s, i) => (
-                        <div className="skill">
+                        <div key={i} className="skill">
                             <p>{s.skill}</p>
                             <img src={s.icon} alt={`${s.skill} Icon`} />
                         </div>

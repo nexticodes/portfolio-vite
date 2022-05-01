@@ -1,6 +1,6 @@
 import React from "react";
 
-const Projects = () => {
+const Projects = ({scrollRef}) => {
     const projects = [
         {
             title: "Turn-based NFT Game",
@@ -32,11 +32,11 @@ const Projects = () => {
     ];
 
     return (
-        <div className="container projects">
+        <div ref={el => scrollRef.current = { ...scrollRef.current, projects: el}} className="container projects">
             <div className="content">
                 <div className="box">
                     {projects.map((p, i) => (
-                        <>
+                        <div key={i}>
                             <div className="container-title">
                                 <h1>{p.name}</h1>
                             </div>
@@ -44,7 +44,7 @@ const Projects = () => {
                                 <p>{p.title}</p>
                                 <p>{p.description}</p>
                             </div>
-                        </>
+                        </div>
                     ))}
                 </div>
             </div>

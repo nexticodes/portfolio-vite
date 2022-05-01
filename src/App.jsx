@@ -1,22 +1,22 @@
-import { useState } from 'react'
-import { Navbar, About, Projects, Skills, Contact, Footer } from './components';
-import './App.css'
+import { useState, useRef } from "react";
+import { Navbar, About, Projects, Skills, Contact, Footer } from "./components";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+    const scrollRef = useRef({});
 
-  return (
-    <div className="App">
-      <Navbar/>
-      <div className="app-container">
-        <About/>
-        <Projects/>
-        <Skills/>
-        <Contact/>
-      </div>
-      <Footer/>
-    </div>
-  )
+    return (
+        <div className="App">
+            <Navbar scrollRef={scrollRef}/>
+            <div className="app-container">
+                <About scrollRef={scrollRef} />
+                <Projects scrollRef={scrollRef} />
+                <Skills scrollRef={scrollRef} />
+                <Contact scrollRef={scrollRef} />
+            </div>
+            <Footer />
+        </div>
+    );
 }
 
-export default App
+export default App;

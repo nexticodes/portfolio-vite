@@ -1,11 +1,11 @@
 import React from 'react'
 import '../assets/styles/About.css'
 
-const About = () => {
+const About = ({scrollRef}) => {
   return (
-    <div className='container about'>
+    <div ref={el => scrollRef.current = { ...scrollRef.current, about: el}} className='container about'>
       <div className='content'>
-        <div className='box'>
+        <div  className='box'>
           <div className='container-title'>
               <h1>Hi, I'm Ernest 👋</h1>
               <h2>Thanks for stopping by!</h2>
