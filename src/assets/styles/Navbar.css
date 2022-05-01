@@ -22,3 +22,16 @@
     font-weight: bold;
     font-size: 100%;
 }
+
+.selected {
+    animation: 1s blowUp forwards;
+    color: aqua;
+}
+
+@keyframes blowUp {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.2);
+    }
+}
