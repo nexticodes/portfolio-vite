@@ -5,10 +5,11 @@ const About = ({scrollRef}) => {
   return (
     <div ref={el => scrollRef.current = { ...scrollRef.current, about: el}} className='container about'>
       <div className='content'>
-        <div  className='box'>
+        <div className='box'>
           <div className='container-title'>
-              <h1>Hi, I'm Ernest 👋</h1>
-              <h2>Thanks for stopping by!</h2>
+          <img/>
+            <h1>Hi, I'm Ernest 👋</h1>
+            <h2>Thanks for stopping by!</h2>
           </div>
           <div className='container-content'>
               <p>I am a Full Stack Software Engineer specializing in using front end web technologies to translate an idea to a workable, efficient code.</p>

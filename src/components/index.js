@@ -1,3 +1,4 @@
+export { default as Splash } from './Splash'; 
 export { default as Navbar } from './Navbar'; 
 export { default as About } from './About'; 
 export { default as Contact } from './Contact'; 
