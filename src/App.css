@@ -11,12 +11,11 @@
     padding-left: 5vw;
     padding-right: 5vw;
     margin: 0;
-    padding-top: 10vh;
 }
 
 .container {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    height: 100vh;
+    padding-top: 15vh;
 }
 
 .container-title h1 {

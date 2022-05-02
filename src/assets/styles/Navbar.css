@@ -1,11 +1,27 @@
 .navbar-container {
     top: 0;
+    opacity: 0;
     width: 100%;
     z-index: 2;
+    background: linear-gradient(180deg, rgba(6,6,6,0.9598214285714286) 85%, rgba(0,0,0,0) 100%);
 }
 
 .fixed {
     position: fixed;
+    opacity: 100;
+
+}
+
+@keyframes intro {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+
+    } to {
+        transform: translateY(0px);
+        opacity: 100;
+        position: fixed;
+    }
 }
 
 .hidden {
@@ -32,8 +48,21 @@
 }
 
 .selected {
-    animation: 1s blowUp forwards;
+    animation: 0.5s blowUp forwards;
     color: aqua;
+}
+
+.selected::before {
+    content: '<';
+}
+
+.selected::after {
+    content: '/>';
+    letter-spacing: 0.5px;
+}
+
+.selected::after, .selected::before {
+    color: gray;
 }
 
 @keyframes blowUp {
@@ -41,5 +70,32 @@
         transform: scale(1);
     } to {
         transform: scale(1.2);
+    }
+}
+
+
+.nav-show {
+    animation: 1s slideIn forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-25px);
+        padding-top: 15px;
+    } to {
+        transform: translateY(0px);
+    }
+}
+
+.nav-sneak {
+    animation: 0.5s sneakOut forwards; 
+}
+
+@keyframes sneakOut {
+    from {
+        transform: translateY(0px);
+    } to {
+        transform: translateY(-25px);
+        padding-top: 15px;
     }
 }
