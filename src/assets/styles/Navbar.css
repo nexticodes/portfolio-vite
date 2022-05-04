@@ -1,31 +1,24 @@
 .navbar-container {
     top: 0;
-    opacity: 0;
+    opacity: 100;
     width: 100%;
     z-index: 2;
     background: linear-gradient(180deg, rgba(6,6,6,0.9598214285714286) 85%, rgba(0,0,0,0) 100%);
-}
-
-.fixed {
     position: fixed;
-    opacity: 100;
-
 }
 
-@keyframes intro {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
 
+@keyframes introSlide {
+    from {
+        opacity: 0;
+        
     } to {
-        transform: translateY(0px);
         opacity: 100;
-        position: fixed;
     }
 }
 
 .hidden {
-    display: hidden;
+    opacity: 0;
 }
 
 .navbar-list {

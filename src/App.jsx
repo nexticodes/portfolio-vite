@@ -22,39 +22,39 @@ function App() {
             // scroll up or scroll down listener.
             const currentScrollY = window.scrollY;
             if (prevScrollY.current < currentScrollY && goingUp) {
-                setGoingUp(false);
+              setGoingUp(false);
             }
-
+            
             if (prevScrollY.current > currentScrollY && !goingUp) {
-                setGoingUp(true);
+              setGoingUp(true);
             }
             prevScrollY.current = currentScrollY;
             console.log("isGoingUp", goingUp);
-
+            
             // scroll listener for switching navbar state depending on which section the user is reading.
             const refCurr = scrollRef.current;
+            const clientHeight = refCurr.about.clientHeight;
             if (
-                window.scrollY <= refCurr.projects.offsetTop &&
-                window.scrollY > refCurr.about.offsetTop
+                currentScrollY < refCurr.projects.offsetTop - 50 &&
+                currentScrollY + 150 > refCurr.about.offsetTop
             ) {
                 setCurrentSection("about");
             } else if (
-                window.scrollY <= refCurr.skills.offsetTop &&
-                window.scrollY > refCurr.projects.offsetTop - 200
+                currentScrollY < refCurr.skills.offsetTop - 50 &&
+                currentScrollY + 100 > refCurr.projects.offsetTop
             ) {
                 setCurrentSection("projects");
             } else if (
-                window.scrollY <= refCurr.contact.offsetTop - 20 &&
-                window.scrollY > refCurr.skills.offsetTop
+                currentScrollY < refCurr.contact.offsetTop - 50 &&
+                currentScrollY + 100 > refCurr.skills.offsetTop
             ) {
-                console.log("skills");
+                console.log('lol', refCurr)
                 setCurrentSection("skills");
             } else if (
-                window.scrollY <= refCurr.skills.offsetTop - 20 &&
-                window.scrollY > refCurr.contact.offsetTop
+                currentScrollY + clientHeight >= refCurr.contact.offsetTop
             ) {
                 setCurrentSection("contact");
-            } else if (window.scrollY < refCurr.about.offsetTop) {
+            } else if (currentScrollY < refCurr.about.offsetTop) {
                 setCurrentSection("splash");
             }
         };

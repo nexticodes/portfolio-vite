@@ -11,9 +11,9 @@ const Navbar = ({ scrollRef, currSection, setCurrentSection, goingUp }) => {
 
     return (
         <div
-            className={`navbar-container ${
-              (!goingUp && currSection === "splash") ? "nav-show fixed" : "nav-sneak fixed"
-            }`}
+            className={`navbar-container ${!goingUp ? "nav-show" : "nav-sneak"} ${
+                currSection === "splash" ? "hidden" : ""
+            } `}
         >
             <ul className="navbar-list">
                 {listItems.map((l, i) => (
