@@ -3,6 +3,16 @@ import React from "react";
 const Projects = ({scrollRef}) => {
     const projects = [
         {
+            title: "Stop&Go Typeracer Clone",
+            name: "RLGLTyperacer",
+            description:
+                "This is browser-based typing game that is similar to the Typeracer game, but with the Red Light Green Light functionality and health point system. The user is given a passage and the user will have to type every character in every word correctly within 60 seconds in order to win the game",
+            tech: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+            images: [],
+            links: ["https://nexticodes.github.io/rlgl-typeracer/", "https://github.com/nexticodes/rlgl-typeracer"],
+            current: true
+        },
+        {
             title: "Turn-based NFT Game",
             name: "SimpleRPG",
             description:
@@ -19,15 +29,6 @@ const Projects = ({scrollRef}) => {
             tech: ["React.JS", "Node.JS", "Ethers.JS", "Solidity", "IPFS"],
             images: [],
             links: ["https://aight-bet.herokuapp.com/", "https://github.com/nexticodes/event-scheduler-app"],
-        },
-        {
-            title: "Stop&Go Typeracer Clone",
-            name: "RLGLTyperacer",
-            description:
-                "This is browser-based typing game that is similar to the Typeracer game, but with the Red Light Green Light functionality and health point system. The user is given a passage and the user will have to type every character in every word correctly within 60 seconds in order to win the game",
-            tech: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
-            images: [],
-            links: ["https://nexticodes.github.io/rlgl-typeracer/", "https://github.com/nexticodes/rlgl-typeracer"],
         },
     ];
 
