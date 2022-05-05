@@ -48,7 +48,6 @@ function App() {
                 currentScrollY < refCurr.contact.offsetTop - 50 &&
                 currentScrollY + 100 > refCurr.skills.offsetTop
             ) {
-                console.log('lol', refCurr)
                 setCurrentSection("skills");
             } else if (
                 currentScrollY + clientHeight >= refCurr.contact.offsetTop
