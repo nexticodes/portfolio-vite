@@ -14,11 +14,10 @@
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     padding-top: 15vh;
 }
 
 .container-title h1 {
     margin: 0;
 }
-

@@ -1,0 +1,13 @@
+.projects {
+  height: 100%
+}
+
+.container-image {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.container-image img {
+  height: 150px;
+}
