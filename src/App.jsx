@@ -29,7 +29,6 @@ function App() {
               setGoingUp(true);
             }
             prevScrollY.current = currentScrollY;
-            console.log("isGoingUp", goingUp);
             
             // scroll listener for switching navbar state depending on which section the user is reading.
             const refCurr = scrollRef.current;

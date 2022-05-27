@@ -8,13 +8,13 @@
 
 
 .app-container {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    margin: 0;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .container {
     height: 100%;
+    width: 100%;
     padding-top: 15vh;
 }
 

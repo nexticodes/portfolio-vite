@@ -3,7 +3,6 @@ import "../assets/styles/Navbar.css";
 
 const Navbar = ({ scrollRef, currSection, setCurrentSection, goingUp }) => {
     const scrollIntoView = (type) => {
-        setCurrentSection(type);
         scrollRef.current[type].scrollIntoView({ behavior: "smooth" });
     };
 
