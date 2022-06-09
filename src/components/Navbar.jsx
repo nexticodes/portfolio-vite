@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import "../assets/styles/Navbar.css";
 
-const Navbar = ({ scrollRef, currSection, setCurrentSection, goingUp }) => {
+const Navbar = ({ scrollRef, currSection, goingUp }) => {
     const scrollIntoView = (type) => {
         scrollRef.current[type].scrollIntoView({ behavior: "smooth" });
     };

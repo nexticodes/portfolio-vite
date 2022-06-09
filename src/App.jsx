@@ -9,6 +9,7 @@ import {
     Footer,
 } from "./components";
 import "./App.css";
+import ProgressBar from './components/ProgressBar';
 
 function App() {
     const scrollRef = useRef({});
@@ -71,7 +72,8 @@ function App() {
                 goingUp={goingUp}
                 scrollRef={scrollRef}
                 setCurrentSection={setCurrentSection}
-            />
+                />
+            {/* <ProgressBar /> */}
             <div
                 ref={(el) =>
                     (scrollRef.current = { ...scrollRef.current, content: el })
